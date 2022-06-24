@@ -1,6 +1,5 @@
 import tkinter as tk
 import random as rng
-import sys
 
 window = tk.Tk()
 firstWindow = tk.Tk()
@@ -25,12 +24,9 @@ def Start(event):
 def Close(event):
     window.destroy()
 
-
 window.geometry("720x480")
 window.bind("<Button-1>", Start)
 window.bind("<Escape>", Close)
-
-
 
 def SelectEvent():
     randomNumber = rng.randint(0, 2)
@@ -64,6 +60,5 @@ def MoveOk():
     x = 150/randomNumber
     y = 100/randomNumber
     buttonNotOk.place(x=x, y=y)
-
 
 window.mainloop()
